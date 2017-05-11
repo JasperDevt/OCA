@@ -9,24 +9,22 @@ public class Yahtzee {
 		Dobbelsteen dobbelsteen3 = new Dobbelsteen();
 		Dobbelsteen dobbelsteen4 = new Dobbelsteen();
 		Dobbelsteen dobbelsteen5 = new Dobbelsteen();
-		Dobbelsteen dobbelsteen6 = new Dobbelsteen();
-		int Stenen[] = new int[6];
+		int Stenen[] = new int[5];
 		InputVastzetten IV = new InputVastzetten();
-		boolean gooi[] = new boolean[6];
+		boolean gooi[] = new boolean[5];
 		gooi[0] = true;
 		gooi[1] = true;
 		gooi[2] = true;
 		gooi[3] = true;
 		gooi[4] = true;
-		gooi[5] = true;
-		if(gooi[0]){Stenen[0] = dobbelsteen1.worp();}
-		if(gooi[1]){Stenen[1] = dobbelsteen2.worp();}
-		if(gooi[2]){Stenen[2] = dobbelsteen3.worp();}
-		if(gooi[3]){Stenen[3] = dobbelsteen4.worp();}
-		if(gooi[4]){Stenen[4] = dobbelsteen5.worp();}
-		if(gooi[5]){Stenen[5] = dobbelsteen6.worp();}
+		
+		
 		while(spelactief){
-			
+			if(gooi[0]){Stenen[0] = dobbelsteen1.worp();}
+			if(gooi[1]){Stenen[1] = dobbelsteen2.worp();}
+			if(gooi[2]){Stenen[2] = dobbelsteen3.worp();}
+			if(gooi[3]){Stenen[3] = dobbelsteen4.worp();}
+			if(gooi[4]){Stenen[4] = dobbelsteen5.worp();}
 			System.out.println();
 			IV.VastzetVraag();
 			int VastGezet = IV.RegelInput();
@@ -36,6 +34,7 @@ public class Yahtzee {
 				System.out.println(counter + " " + stukvoorstuk);
 				if(stukvoorstuk == VastGezet){
 					gooi[counter]=false;
+					continue;
 				} else {
 					//doe niets.
 				}
@@ -44,4 +43,6 @@ public class Yahtzee {
 	}
 }
 // updaten naar GitHub <- nog steeds
-// 
+// er 5 dobbelstenen van maken
+// Arraylist -> bewaart objects. Waaronder dus de wrapperclass
+// continue, stop met de loop doe opnieuw gebruiken.
