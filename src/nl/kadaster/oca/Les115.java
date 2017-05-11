@@ -3,25 +3,22 @@ package nl.kadaster.oca;
 public class Les115 {
 	public static void main(String [] args){
 		Auto mijnAuto = new Auto();
-		mijnAuto.autoSchilderen("zwart");
-		System.out.println(mijnAuto.kleur);
-		
-		Auto mijn2eAuto = new Auto();
-		mijn2eAuto.autoSchilderen("wit");
-		System.out.println(mijnAuto.kleur);
-		System.out.println(mijn2eAuto.kleur);
+		mijnAuto.setAantalRuiten(87); // de setter wordt zo gedaan, de enige manier waarop de private variabele benaderd kan worden.
+//		mijnAuto.aantalRuiten; Deze regel zou niet werken, het is immers een private int
+		mijnAuto.getAantalRuiten(); // deze regel werkt wel, we hebben ingesteld dat via een methode de private variabele benaderd kan worden
 	} // einde main	
 }
 
 class Auto {
-	static int aantalWielen = 4;
-	String kleur;
-	void besturen(){
-		System.out.println("Ga maar rijden. broem, broem.");
+	private int aantalRuiten; // encapsulation stap 1
+	void setAantalRuiten(int methodeRuiten){ // encapsulation stap 2
+		if(methodeRuiten < 3)
+			aantalRuiten = 3;
+		else{
+			methodeRuiten = aantalRuiten;
+		}
 	}
-	
-	void autoSchilderen(String watVoorKleur) {
-		System.out.println("Schilderen met kleur: " + watVoorKleur);
-		kleur = watVoorKleur;
+	int getAantalRuiten(){ // encapsulation stap 3
+	return aantalRuiten;
 	}
 }
