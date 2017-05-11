@@ -43,5 +43,5 @@ public class Yahtzee {
 		} // einde while loop
 	}
 }
-// updaten naar GitHub
+// updaten naar GitHub <- nog steeds
 // 
