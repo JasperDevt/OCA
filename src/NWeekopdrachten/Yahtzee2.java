@@ -1,4 +1,4 @@
-package Weekopdrachten;
+package NWeekopdrachten;
 
 import java.util.ArrayList;
 import java.util.Random;

@@ -8,9 +8,16 @@ public class DemoHuis {
 //		huisA.huisnummer = 11;
 		Stad apeldoorn = new Stad();
 		apeldoorn.wijk.straat.huis.huisnr.nummer = 12;
+		Stad steden[] = new Stad[10];
+		for(int i=0; i<steden.length;i++){
+			if(steden[i] != null){
+				System.out.println(steden[i].naam);
+			}else{
+				steden[i] = new Stad();
+			}
+		}
 		
 	}
-
 }
 class Stad{
 	Wijk wijk = new Wijk();
